@@ -1,0 +1,8 @@
+{
+    "liveshare.accessibility.soundsEnabled": false,
+    "liveshare.accessibility.soundVolume": 0,
+    "accessibility.signals.sounds.volume": 0,
+    "files.autoSave": "afterDelay",
+    "liveshare.accessibility.voiceVolume": 0,
+    "liveshare.accessibility.accessibilityFeaturesEnabled": "off"
+}
