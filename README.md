@@ -1,4 +1,4 @@
-# pass.in
+# Pass.in
 
 O pass.in é uma aplicação de **gestão de participantes em eventos presenciais**. 
 
@@ -7,6 +7,52 @@ A ferramenta permite que o organizador cadastre um evento e abra uma página pú
 Os participantes inscritos podem emitir uma credencial para check-in no dia do evento.
 
 O sistema fará um scan da credencial do participante para permitir a entrada no evento.
+
+## Setup
+
+- Install Node.js v20.11.1 using nvm and set it up for usage in the project:
+
+```bash
+nvm install 20.11.1
+nvm use 20.11.1
+```
+
+- Clone the repository:
+
+```bash
+git clone <URL>
+cd <PROJECT_NAME>
+```
+
+- Create a `.env` file in the root of the project with the following environment variables:
+
+```env
+echo "DATABASE_URL="file:./dev.db"" > .env
+```
+
+- Install the project dependencies:
+
+```bash
+npm install
+```
+
+- Execute the Prisma migrations to create the tables in the database:
+
+```bash
+npx prisma migrate dev
+```
+
+- Run the development server:
+
+```bash
+npm run dev
+```
+
+- To access the Prisma GUI and see the table contents, run:
+
+```bash
+npx prisma studio
+```
 
 ## Requisitos
 
@@ -32,6 +78,7 @@ O sistema fará um scan da credencial do participante para permitir a entrada no
 ## Documentação da API (Swagger)
 
 Para documentação da API, acesse o link: https://nlw-unite-nodejs.onrender.com/docs
+
 
 ## Banco de dados
 
@@ -79,4 +126,6 @@ CREATE UNIQUE INDEX "attendees_event_id_email_key" ON "attendees"("event_id", "e
 
 -- CreateIndex
 CREATE UNIQUE INDEX "check_ins_attendeeId_key" ON "check_ins"("attendeeId");
-```# Pass-In
+
+
+
